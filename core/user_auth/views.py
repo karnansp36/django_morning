@@ -39,7 +39,7 @@ def task_view(request):
 def task_list(request):
     tas = [{'title':'django', 'desc':'django'},{'title':'django', 'desc':'django'}]
     task = Task_model.objects.all()
-    return render(request, 'task_list.html',{'task':task} )
+    return render(request, 'task_list.html',{'task':task, 'role':'trainer'} )
 
 def task_data(request, id):
     task = Task_model.objects.get(id = id)
