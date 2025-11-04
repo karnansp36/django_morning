@@ -24,4 +24,5 @@ urlpatterns = [
     path('', include('user_auth.urls')),
     path('', include('user_post.urls')),
     path('api/', include('insta.urls')),
+    path('', include('user_email.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
